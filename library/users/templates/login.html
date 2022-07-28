@@ -1,0 +1,14 @@
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+
+        {{form}}
+
+        <input type="submit" value="Login"/></input>
+    </form>
+
+    <span>
+        Don't yet have an account?
+        <a href="{% url 'login' %}">Sign up here</a>
+    </span>
+{% endblock content %}

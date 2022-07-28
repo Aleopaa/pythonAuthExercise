@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Here are all our books!</h1>
+
+    <ul>
+        {% for book in bookos %}
+            <li>
+                <a href="{% url 'catalogue-show' id=book.id %}">{{book.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
