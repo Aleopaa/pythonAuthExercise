@@ -17,14 +17,14 @@ def about(request):
     
     #HERE WE ARE RENDERING ABOUT.HTML
 
-@login_required ##this decorator can be used anywhere if you want the user to have to login before accessing this page through the route and in general 
+#@login_required ##this decorator can be used anywhere if you want the user to have to login before accessing this page through the route and in general 
 def books(request):
     data = {'bookos': Book.objects.all()}
     return render(request, 'book.html', data)
 
     #HERE WE ARE RENDERING BOOK.HTML WITH THE DATA OF ALL OF OUR BOOKS AFTER LOGIN 
 
-@login_required
+#@login_required
 def show(request, id):
     book = get_object_or_404(Book, pk=id)
     # prints
